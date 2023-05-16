@@ -34,12 +34,22 @@ public class SwiftCodeKit {
     public static func getVersion() -> String {
         return "Swift Code Kit 0.0.1"
     }
+    
+    public static func getUser() -> String {
+        let user = Dummy.user1
+        return user.dictionary?.stringify() ?? ""
+    }
 }
 
-// MARK: Delegates
+// MARK: - Delegates
 
 public extension SwiftCodeKit {
     static var swiftCodeKitDidStart: (() -> Void)?
     static var swiftCodeKitDidFinish: (() -> Void)?
     static var swiftCodeKitStepperValueDidChange: ((Double) -> Void)?
+    
+    // User
+    
+    static var swiftCodeKitUserDidUpdate: ((String) -> Void)?
+    static var swiftCodeKitUserPointerDidUpdate: ((UnsafePointer<CChar>?) -> Void)?
 }

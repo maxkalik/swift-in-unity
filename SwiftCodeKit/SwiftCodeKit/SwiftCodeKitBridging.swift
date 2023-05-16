@@ -33,7 +33,13 @@ public func swiftCodeKitGetVersion() -> UnsafePointer<CChar>? {
     return UnsafePointer(string)
 }
 
-// Delegates
+@_cdecl("swiftCodeKitGetUser")
+public func swiftCodeKitGetUser() -> UnsafePointer<CChar>? {
+    let string = strdup(SwiftCodeKit.getUser())
+    return UnsafePointer(string)
+}
+
+// MARK: - Delegates
 
 @_cdecl("setSwiftCodeKitDidStart")
 public func setSwiftCodeKitDidStart(delegate: @convention(c) @escaping () -> Void) {
@@ -48,4 +54,16 @@ public func setSwiftCodeKitDidFinish(delegate: @convention(c) @escaping () -> Vo
 @_cdecl("setSwiftCodeKitStepperValueDidChange")
 public func setSwiftCodeKitStepperValueDidChange(delegate: @convention(c) @escaping (Double) -> Void) {
     SwiftCodeKit.swiftCodeKitStepperValueDidChange = delegate
+}
+
+// User
+
+@_cdecl("setSwiftCodeKitUserDidUpdate")
+public func setSwiftCodeKitUserDidUpdate(delegate: @convention(c) @escaping (String) -> Void) {
+    SwiftCodeKit.swiftCodeKitUserDidUpdate = delegate
+}
+
+@_cdecl("setSwiftCodeKitUserPointerDidUpdate")
+public func setSwiftCodeKitUserPointerDidUpdate(delegate: @convention(c) @escaping (UnsafePointer<CChar>?) -> Void) {
+    SwiftCodeKit.swiftCodeKitUserPointerDidUpdate = delegate
 }

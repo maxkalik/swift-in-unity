@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11D3371F2A1409B900209F62 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D3371E2A1409B900209F62 /* Encodable.swift */; };
+		11D337212A1409CC00209F62 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D337202A1409CC00209F62 /* Dictionary.swift */; };
+		11D337232A1409DC00209F62 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D337222A1409DC00209F62 /* Score.swift */; };
+		11D337252A1409F100209F62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D337242A1409F100209F62 /* User.swift */; };
+		11D337292A140AE400209F62 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D337282A140AE400209F62 /* Dummy.swift */; };
 		11F001DE28E5C9300088226C /* SwiftCodeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 11F001DD28E5C9300088226C /* SwiftCodeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11F001E528E5C94C0088226C /* SwiftCodeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F001E428E5C94C0088226C /* SwiftCodeKit.swift */; };
 		11F001E728E5C95E0088226C /* SwiftCodeKitBridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F001E628E5C95E0088226C /* SwiftCodeKitBridging.swift */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11D3371E2A1409B900209F62 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		11D337202A1409CC00209F62 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		11D337222A1409DC00209F62 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		11D337242A1409F100209F62 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		11D337282A140AE400209F62 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		11F001DA28E5C9300088226C /* SwiftCodeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCodeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F001DD28E5C9300088226C /* SwiftCodeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftCodeKit.h; sourceTree = "<group>"; };
 		11F001E428E5C94C0088226C /* SwiftCodeKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCodeKit.swift; sourceTree = "<group>"; };
@@ -32,6 +42,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11D337262A1409FD00209F62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11D337242A1409F100209F62 /* User.swift */,
+				11D337222A1409DC00209F62 /* Score.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11D337272A140A0200209F62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11D337202A1409CC00209F62 /* Dictionary.swift */,
+				11D3371E2A1409B900209F62 /* Encodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		11F001D028E5C9300088226C = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +79,13 @@
 		11F001DC28E5C9300088226C /* SwiftCodeKit */ = {
 			isa = PBXGroup;
 			children = (
+				11D337272A140A0200209F62 /* Extensions */,
+				11D337262A1409FD00209F62 /* Models */,
 				11F001DD28E5C9300088226C /* SwiftCodeKit.h */,
 				11F001E428E5C94C0088226C /* SwiftCodeKit.swift */,
 				11F001E828E5CB5A0088226C /* SwiftCodeKitViewController.swift */,
 				11F001E628E5C95E0088226C /* SwiftCodeKitBridging.swift */,
+				11D337282A140AE400209F62 /* Dummy.swift */,
 			);
 			path = SwiftCodeKit;
 			sourceTree = "<group>";
@@ -140,8 +171,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F001E528E5C94C0088226C /* SwiftCodeKit.swift in Sources */,
+				11D337212A1409CC00209F62 /* Dictionary.swift in Sources */,
+				11D337292A140AE400209F62 /* Dummy.swift in Sources */,
 				11F001E728E5C95E0088226C /* SwiftCodeKitBridging.swift in Sources */,
 				11F001E928E5CB5A0088226C /* SwiftCodeKitViewController.swift in Sources */,
+				11D337232A1409DC00209F62 /* Score.swift in Sources */,
+				11D3371F2A1409B900209F62 /* Encodable.swift in Sources */,
+				11D337252A1409F100209F62 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

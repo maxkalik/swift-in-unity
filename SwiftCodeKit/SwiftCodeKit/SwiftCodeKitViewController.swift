@@ -41,6 +41,29 @@ final class SwiftCodeKitViewController: UIViewController {
         
         SwiftCodeKit.swiftCodeKitDidStart?()
         setupViews()
+        
+        DispatchQueue.main.async {
+            guard let user = Dummy.user1.jsonString else { return }
+            user.utf8CString.withUnsafeBufferPointer { buffer in
+                let result = buffer.baseAddress
+                SwiftCodeKit.swiftCodeKitUserPointerDidUpdate?(result)
+            }
+            
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            guard let user = Dummy.user2.jsonString else { return }
+
+            let userString = strdup(user)
+            SwiftCodeKit.swiftCodeKitUserPointerDidUpdate?(userString)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            guard let user = Dummy.user3.jsonString else { return }
+            
+            let userString = strdup(user)
+            SwiftCodeKit.swiftCodeKitUserPointerDidUpdate?(userString)
+        }
     }
     
     func setupViews() {
